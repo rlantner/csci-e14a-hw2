@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+ 
+{% block content %}
+<main class="container add-user-section">
+<div class="section-content">
+    <div class="form-style-8">
+    <h2>Create a new user</h2>
+
+    <form method="POST" action="/add-user">
+        {{ form.hidden_tag() }}
+
+        <div class="form-group">
+
+              <!-- username field  --> 
+
+            {{ form.username.label }}                 
+            {{ form.username(class="form-control") }} 
+
+        </div>
+
+        <div class="form-group">
+            
+             <!-- first_name field  --> 
+
+            {{ form.first_name.label }}                  
+            {{ form.first_name(class="form-control") }} 
+
+        </div>
+
+        <div class="form-group">
+            
+            <!-- last_name field  --> 
+
+            {{ form.last_name.label }}                  
+            {{ form.last_name(class="form-control") }} 
+
+        </div>
+
+        <div class="form-group">
+            
+             <!-- prog_lang drop-down  --> 
+
+             <!-- HINT  --> 
+             <!-- check csv file for prog_lang values  --> 
+
+            {{ form.prog_lang.label }}
+            {{ form.prog_lang(class="form-control") }}    
+
+            <!-- NOTE TO REBECCA: UPDATE THIS TO BE A DROPDOWN  --> 
+
+        </div>
+
+        <div class="form-group">
+            
+             <!-- experience_yr field  --> 
+
+            {{ form.experience_yr.label }}                  
+            {{ form.experience_yr(class="form-control") }} 
+
+        </div>
+
+        <div class="form-group">
+            
+             <!-- age field  --> 
+
+            {{ form.age.label }}                  
+            {{ form.age(class="form-control") }} 
+
+        </div>
+
+        <div class="form-group">
+            
+             <!-- hw1 field  --> 
+
+            {{ form.hw1_hrs.label }}                  
+            {{ form.hw1_hrs(class="form-control") }}              
+
+        </div>
+
+        {{ form.submit(class="btn btn-primary btn-xl")}}
+    </form>
+</div>
+</div>
+</main>
+{% endblock %}

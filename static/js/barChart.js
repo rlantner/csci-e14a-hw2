@@ -52,11 +52,6 @@
 
         // Set ageMap
 
-        // var age_bins = d3.nest()
-        //     .key(function(d) { return d.age; })
-        //     .rollup(function(v) { return v.length; })
-        //     .entries(data);
-
 
         // X Scale
 
@@ -108,16 +103,7 @@
       
 
         // Add y-label
-   
-        // const labels = container.selectAll(".text")        
-        //     .data(bins)
-        //     .enter()
-        //     .append("text")
-        //     .attr("class","label")
-        //     .attr("x", (function(d) { return scX(d.date); }  ))
-        //     .attr("y", function(d) { return y(d.value) - 20; })
-        //     .attr("dy", ".75em")
-        //     .text(function(d) { return d.length; });
+
 
         // Add x-axis
 
@@ -148,9 +134,11 @@
     function totalUsers() {
 
         // init totalUsers
+
         const totalUsers = data.length;
 
         // append totalUsers to h3#total_users_text
+        
         d3.select('#total_users_text')
             .append('span')
             .text(`${totalUsers}`);
